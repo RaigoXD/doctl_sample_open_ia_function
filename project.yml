@@ -1,0 +1,11 @@
+environment:
+  OPEN_IA_API_KEY: ${OPEN_IA_API_KEY}
+  REGION_NAME: ${REGION_NAME}
+  ENDPOINT_URL: ${ENDPOINT_URL}
+  AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+  AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+packages:
+  - name: sample
+    actions:
+      - name: create_ghibli_image
+        runtime: 'python:default'

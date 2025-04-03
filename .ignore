@@ -1,0 +1,5 @@
+
+# this is a files that is ignored by doctl serveless deploy
+env/
+animals.jpg
+familia.png

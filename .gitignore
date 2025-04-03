@@ -1,0 +1,8 @@
+env/
+
+# dev test images
+animales.jpg 
+familia.png
+
+.deployed
+__pycache__/

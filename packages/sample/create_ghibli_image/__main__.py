@@ -29,12 +29,20 @@ def main(event):
     )
 
     file_name = event.get("image", None)
+    bucket_name = event.get("bucket_name", None)
+
     if file_name is None:
         return {
             "statusCode": 400,
             "body": "Missing image parameter"
         }
-    image_bytes = download_file(file_name, "testfunction", client)
+    elif bucket_name is None:
+        return {
+            "statusCode": 400,
+            "body": "Missing bucket_name parameter"
+        }
+
+    image_bytes = download_file(file_name, bucket_name, client)
     
     # free memory    
     del client

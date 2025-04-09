@@ -9,3 +9,7 @@ packages:
     actions:
       - name: create_ghibli_image
         runtime: 'python:default'
+        limits:
+          memory: 1024
+          timeout: 180000
+  
